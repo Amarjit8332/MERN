@@ -1,0 +1,38 @@
+<div class="employee-list-container">
+    <h2>Employee List</h2>
+    <button routerLink="/create-employee">Create Employee</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Unique Id</th>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Mobile No</th>
+          <th>Designation</th>
+          <th>Gender</th>
+          <th>Course</th>
+          <th>Create Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{employee.f_Id}}</td>
+          <td><img [src]="employee.f_Image" alt="Employee Image" width="50"></td>
+          <td>{{employee.f_Name}}</td>
+          <td>{{employee.f_Email}}</td>
+          <td>{{employee.f_Mobile}}</td>
+          <td>{{employee.f_Designation}}</td>
+          <td>{{employee.f_gender}}</td>
+          <td>{{employee.f_Course}}</td>
+          <td>{{employee.f_Createdate | date}}</td>
+          <td>
+            <button routerLink="/edit-employee/{{employee.f_Id}}">Edit</button>
+            <button (click)="deleteEmployee(employee.f_Id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

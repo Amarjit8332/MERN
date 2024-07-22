@@ -1,0 +1,42 @@
+<div class="edit-employee-container">
+    <h2>Edit Employee</h2>
+    <form (ngSubmit)="updateEmployee()">
+      <div>
+        <label for="f_Name">Name</label>
+        <input type="text" id="f_Name" [(ngModel)]="employee.f_Name" name="f_Name" required>
+      </div>
+      <div>
+        <label for="f_Email">Email</label>
+        <input type="email" id="f_Email" [(ngModel)]="employee.f_Email" name="f_Email" required>
+      </div>
+      <div>
+        <label for="f_Mobile">Mobile No</label>
+        <input type="text" id="f_Mobile" [(ngModel)]="employee.f_Mobile" name="f_Mobile" required>
+      </div>
+      <div>
+        <label for="f_Designation">Designation</label>
+        <input type="text" id="f_Designation" [(ngModel)]="employee.f_Designation" name="f_Designation" required>
+      </div>
+      <div>
+        <label for="f_gender">Gender</label>
+        <select id="f_gender" [(ngModel)]="employee.f_gender" name="f_gender" required>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div>
+        <label for="f_Course">Course</label>
+        <input type="text" id="f_Course" [(ngModel)]="employee.f_Course" name="f_Course" required>
+      </div>
+      <div>
+        <label for="f_Image">Image</label>
+        <input type="text" id="f_Image" [(ngModel)]="employee.f_Image" name="f_Image">
+      </div>
+      <div>
+        <label for="f_Createdate">Create Date</label>
+        <input type="date" id="f_Createdate" [(ngModel)]="employee.f_Createdate" name="f_Createdate" required>
+      </div>
+      <button type="submit">Update</button>
+    </form>
+  </div>
+  
